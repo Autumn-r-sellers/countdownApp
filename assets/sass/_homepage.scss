@@ -1,0 +1,71 @@
+//sass is used. For documentation on sass see:
+//https://sass-lang.com/documentation
+
+//css grid used. For reference see:
+//https://css-tricks.com/snippets/css/complete-guide-grid/
+
+.wrapper{
+  font-family: 'Expletus Sans', cursive;
+  display: grid;
+  grid-template-areas:
+  'header'
+  'headline'
+  'create'
+  'view';
+  grid-row-gap: 3rem;
+  justify-content: center;
+
+  padding: 10rem 1rem;
+
+  //find variables in the variables scss file for what these widths are.
+  @media(min-width: $l-screen){
+    padding: 10rem;
+  }
+
+  .header{
+    grid-area: header;
+    text-align: center;
+
+    h1{
+      font-size: 1.85rem;
+      @media(min-width: $s-screen){
+        font-size: 2rem;
+      }
+    }
+  }
+  .headline{
+    grid-area: headline;
+    text-align: center;
+
+    h2{
+      font-size: 1.45rem;
+      @media(min-width: $s-screen){
+        font-size: 1.85rem;
+      }
+    }
+  }
+  .create{
+    grid-area: create;
+  }
+  .view{
+    grid-area: view;
+  }
+  .buttonClass{
+    border: #e7d8b4 .1rem solid;
+    padding: 1rem;
+    border-radius: 4rem 4rem;
+    text-align: center;
+    background-color: white;
+
+    &:hover,
+    &:focus,
+    &:active{
+      background-color: #e7d8b4;
+      outline: none;
+    }
+    h3{
+      font-size: 1.45rem;
+      margin-bottom: 0;
+    }
+  }
+}
